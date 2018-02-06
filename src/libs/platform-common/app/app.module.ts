@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UnfoundPage } from '../pages/unfound/unfound';
 import { EmptyPage } from '../pages/empty/empty';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 @NgModule({
   declarations: [
@@ -12,12 +13,14 @@ import { EmptyPage } from '../pages/empty/empty';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgZorroAntdModule
   ],
   exports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgZorroAntdModule
   ],
   providers: [],
   bootstrap: []

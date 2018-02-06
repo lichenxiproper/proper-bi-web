@@ -1,1 +1,33 @@
-<div>登录</div>
+<div class="login-page" (keyup)="keyup($event)">
+  <div class="login-background"></div>
+  <div class="login-background-overlay"></div>
+  <div class="login-header">
+    <span class="login-log">
+      <i class="fa fa-bar-chart"></i>
+      商业智能系统
+    </span>
+  </div>
+  <div class="login-form">
+    <div class="form-header">用户登录</div>
+    <div class="form-card">
+      <fieldset class="form-group">
+        <input type="text" [(ngModel)]="input.username" class="form-control" placeholder="用户名">
+      </fieldset>
+      <fieldset class="form-group">
+        <input type="password" [(ngModel)]="input.password" class="form-control" placeholder="密码">
+      </fieldset>
+      <div class="login-remember">
+        <label nz-checkbox>
+          <span class="remember-name" [(ngModel)]="input.isRemember" (ngModelChange)="isRememberChange()">记住用户名</span>
+        </label>
+      </div>
+      <button nz-button class="login-form-button" *ngIf="!isSubmit" (click)="login()" [nzType]="'primary'" [nzSize]="'large'">登录</button>
+      <button nz-button class="login-form-button" *ngIf="isSubmit" [nzType]="'primary'" [nzSize]="'large'" disabled>登录中...</button>
+      <div *ngIf="errMsg" class="login-error">
+        {{ errMsg }}
+        <i class="fa fa-close" (click)="closeErrMsg()"></i>
+      </div>
+    </div>
+  </div>
+</div>
+

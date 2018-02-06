@@ -6,6 +6,7 @@ import { PlatformCoreModule } from '../libs/platform-core';
 import { coreConstant } from './constants/core.constant';
 import { PlatformCommonModule } from '../libs/platform-common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NgZorroAntdModule.forRoot(),
     AppRoutingModule,
     PlatformCoreModule.forRoot(coreConstant),
     PlatformCommonModule
