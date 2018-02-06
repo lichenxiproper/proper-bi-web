@@ -4,9 +4,10 @@
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
     "module": "es2015",
-    "types": [
-      "jquery",
-      "mcustomscrollbar"
-    ]
-  }
+    "types": []
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ]
 }

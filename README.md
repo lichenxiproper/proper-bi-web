@@ -18,13 +18,12 @@ $ npm config set cache "C:\Program Files\nodejs\node_cache"
 
 ### 运行方式
 ```
+# 安装全局命令行组件
+$ npm install grunt-cli -g
+
 # 安装 SCSS 编译环境
 $ gem install sass
 $ gem install compass
-
-# 连接npm私服
-$ npm config set registry https://server.propersoft.cn:8081/repository/npm-public/
-$ npm login --registry=https://server.propersoft.cn:8081/repository/npm-public/
 
 # 安装项目依赖的组件
 $ npm install
@@ -33,7 +32,7 @@ $ npm install
 $ npm run serve
 # 也可连接实际后端服务器运行
 $ npm run serve:real
-# 启动后端代理服务器，修改后也需手动重启
+# 当需要启动后端代理服务器时，需手动启动，修改后也需手动重启
 $ node proxy/proxy-server.js
 
 # 进行ts代码检查
