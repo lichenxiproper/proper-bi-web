@@ -1,1 +1,49 @@
-<div>首页</div>
+<div class="main-wrapper">
+  <div class="main-header">
+    <div class="header-log">
+      <i class="fa fa-bar-chart"></i>
+      商业智能系统
+    </div>
+    <div class="header-menus">
+      <a class="header-menu menu-dashboard">
+        <i class="fa fa-dashboard"></i>
+        首页
+      </a>
+      <a class="header-menu menu-dashboard">
+        <i class="fa fa-th-large"></i>
+        看板
+      </a>
+      <a class="header-menu menu-report">
+        <i class="fa fa-file-text"></i>
+        报告
+      </a>
+      <a class="header-menu menu-setting">
+        <i class="fa fa-cog"></i>
+        设置
+      </a>
+    </div>
+    <a class="header-users dropdown">
+      <div class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+        <img src="../../../../assets/images/user.jpg" />
+        管理员
+      </div>
+      <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation">
+          <a role="menuitem">
+            <i class="fa fa-user"></i>
+            用户信息
+          </a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" (click)="logout()">
+            <i class="fa fa-power-off"></i>
+            退出登录
+          </a>
+        </li>
+      </ul>
+    </a>
+  </div>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
