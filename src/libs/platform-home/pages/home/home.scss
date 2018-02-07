@@ -6,17 +6,22 @@
 }
 
 .main-header {
+  width: 100%;
   height: 50px;
   background-color: #3d4a5d;
   display: flex;
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+
   .header-log {
     width: 230px;
     color: #fff;
     font-size: 17px;
     font-weight: 700;
     text-align: center;
-    padding: 11px 0;
+    padding: 13px 0;
 
     .fa {
       color: #108ee9;
@@ -45,14 +50,14 @@
   }
 
   .header-users {
-    width: 120px;
     margin-right: 24px;
     display: flex;
     color: #fff;
     align-items: center;
     font-size: 13px;
     font-weight: 100;
-    padding-left: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
 
     .dropdown-toggle {
       height: 100%;
@@ -92,5 +97,17 @@
       border-radius: 50%;
       margin-right: 9px;
     }
+  }
+}
+
+.content-wrapper {
+  padding-top: 50px;
+  height: 100%;
+  width: 100%;
+
+  .main-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
   }
 }

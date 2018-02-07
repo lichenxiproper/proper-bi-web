@@ -59,7 +59,7 @@ export class LoginPage implements OnInit {
       if (this.input.isRemember) {
         localStorage.setItem('pbiUsername', this.input.username);
       }
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home/bi-board/dashboard']);
     }, (err: HttpErrorResponse) => {
       this.isSubmit = false;
       this.errMsg = err.error;
